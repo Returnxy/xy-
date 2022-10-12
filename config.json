@@ -1,0 +1,14 @@
+{
+  "ownerNumber": ["6289653381067@s.whatsapp.net"],
+  "ownerNumber2": ["6289514080169@s.whatsapp.net"],
+  "ownerName": ["xy"],
+  "botName": "Xy Bot",
+  "sessionName": "xy-session",
+  "pathimg": "./media/Chitanda.jpg",
+  "gamewaktu": 90,
+  "limitCount": 25,
+  "gcount": {
+	"prem": 35,
+	"user": 15
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "wait": "_Wait a minute, data is being processed!_",
+  "error": {
+    "Iv": "Link Invalid",
+    "api": "Sorry"
+  },
+  "OnlyGrup": "This Feature is Only Group",
+  "OnlyPM": "This Feature is Only In Private Chat",
+  "GrupAdmin": "This Feature is Only Group Admin",
+  "BotAdmin": "Bot Harus menjadi admin",
+  "OnlyOwner": "This Feature is Only Owner",
+  "OnlyPrem": "This Feature is Only User Premium"
+}
