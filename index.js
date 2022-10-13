@@ -117,7 +117,6 @@ const connectToWhatsApp = async () => {
           const { connection, lastDisconnect } = update
             if (connection === 'close') {
                 lastDisconnect.error?output?statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log('connection logged out...')
-            }
         })
 	conn.ev.on('creds.update', await saveCreds)
 	
