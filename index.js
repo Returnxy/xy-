@@ -118,7 +118,7 @@ const connectToWhatsApp = async () => {
 		    starting.stop()
 		    console.log(mylog('server ready'))
                 lastDisconnect.error?output?statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log(mylog('connection logged out...'))
-	    }})
+	    }, })
 	conn.ev.on('creds.update', () => saveState)
 	
         conn.ev.on('group-participants.update', async (data) => {
