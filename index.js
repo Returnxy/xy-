@@ -111,14 +111,16 @@ const connectToWhatsApp = async () => {
 		require('./message/msg')(conn, msg, m, setting, store, welcome)
 	})
 	conn.ev.on('connection.update', (update) => {
-          if (global.qr !== update.qr) {
-           global.qr = update.qr
-          }
           const { connection, lastDisconnect } = update
             if (connection === 'close') {
-                lastDisconnect.error?output?statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log('connection logged out...')
-        } } )
-	conn.ev.on('creds.update', await saveCreds)
+		    status.stop()
+		    reconnect.stop()
+		    starting.stop()
+		    console.log(mylog('server ready'))
+                lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log(mylog('connection logged out...'))
+        } 
+	})
+	conn.ev.on('creds.update', () => asaveState)
 	
         conn.ev.on('group-participants.update', async (data) => {
           const isWelcome = welcome.includes(data.id) ? true : false
