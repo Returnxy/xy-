@@ -107,9 +107,6 @@ const connectToWhatsApp = async () => {
 		require('./message/msg')(conn, msg, m, setting, store, welcome)
 	})
 	conn.ev.on('connection.update', (update) => {
-          if (global.qr !== update.qr) {
-           global.qr = update.qr
-          }
           const { connection, lastDisconnect } = update
             if (connection === 'close') {
                 lastDisconnect.error?output?statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log('connection logged out...')
